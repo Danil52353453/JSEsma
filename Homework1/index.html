@@ -27,23 +27,22 @@
          let num = 0;
          return {
             increment() {
-               console.log(num);
-               return ++num;
+                ++num;
             },
             decrement() {
-               console.log(num);
-               return num--;
-            }
-         }
+                --num;
+            },
+            getCounter(){
+               return num
+            },
+         };
       }
 
-      let count = createCalculator();
-      count.increment();
-      count.increment();
-      count.increment();
-      count.decrement();
-      count.decrement();
-      count.decrement();
+      const count = createCalculator();
+      
+
+
+      
 
 
    </script>
