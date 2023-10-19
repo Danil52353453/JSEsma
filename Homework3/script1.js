@@ -8,25 +8,25 @@
 // Свойство department (отдел) - строка, отдел, в котором работает менеджер.
 // Метод displayInfo() - переопределяет метод displayInfo() родительского класса и выводит информацию о менеджере (имя и отдел).
 
-// class Employee {
-//   constructor(name) {
-//     this.name = name;
-//   }
-//   displayInfo() {
-//     console.log(`Name ${this.name} `);
-//   }
-// }
-// class Manager extends Employee {
-//   constructor(name, department) {
-//     super(name);
-//     this.department = department;
-//   }
-//   displayInfo() {
-//     console.log(`Name ${this.name},Department ${this.department} `);
-//   }
-// }
-// const employee = new Employee("John Smith");
-// employee.displayInfo(); // "Name: John Smith"
+class Employee {
+  constructor(name) {
+    this.name = name;
+  }
+  displayInfo() {
+    console.log(`Name ${this.name} `);
+  }
+}
+class Manager extends Employee {
+  constructor(name, department) {
+    super(name);
+    this.department = department;
+  }
+  displayInfo() {
+    console.log(`Name ${this.name},Department ${this.department} `);
+  }
+}
+const employee = new Employee("John Smith");
+employee.displayInfo(); // "Name: John Smith"
 
-// const manager = new Manager("Jane Doe", "Sales");
-// manager.displayInfo(); // "Name: John Doe, Department: Sales"
+const manager = new Manager("Jane Doe", "Sales");
+manager.displayInfo(); // "Name: John Doe, Department: Sales"
