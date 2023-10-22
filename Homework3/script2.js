@@ -19,18 +19,20 @@ class Product {
   }
 }
 class Order  {
-  constructor(id) {
-    this.id = id;
-    this.products = [];
-  }
-  addProduct(product) {
-    if (product instanceof Product) {
-      this.products.push(product);
-    }
-  }
-  getTotalPrice() {
-    return this.products.reduce((sum, value) => sum + value.price, 0);
-  }
+   products = []
+   constructor(id){
+      this.id = id;
+      
+   }
+   addProduct(product){
+      if(product instanceof Product){
+         this.products.push(product);
+      }
+   }
+   getTotalPrice(){
+      return this.products.reduce((sum,value) => sum + value.price * value.quantity, 0)
+   }
+   
 }
 
 // Пример использования:
